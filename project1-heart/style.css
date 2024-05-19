@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	background-color:black;
+	overflow: hidden;
+	height: 100vh;
+}
+
+span {
+	background-image:url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-256.png");
+	/* background-image: url("https://cdn3.iconfinder.com/data/icons/fauna-1/512/donkey-256.png"); */
+	/* background-image: url("https://cdn4.iconfinder.com/data/icons/STROKE/animals/png/256/horse.png"); */
+
+	/* background-image:url("https://cdn2.iconfinder.com/data/icons/party-new-years/128/Party_Newyears_Ballon-256.png"); */
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	pointer-events: none;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* animation:heart-animate  */
+	animation: heart-animate 10s;
+}
+@keyframes heart-animate {
+	0% {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+		filter: hue-rotate(0);
+	}
+	100% {
+		transform: translate(-50%, -5000%);
+		opacity: 0;
+		filter: hue-rotate(800deg);
+	}
+}

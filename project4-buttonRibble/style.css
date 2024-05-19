@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	background: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-size:cover;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	background-color: rgb(0, 255, 213);
+	padding: 15px 20px;
+	text-decoration: none;
+	color: black;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.354);
+	position: relative;
+	overflow: hidden;
+}
+.btn span {
+	position: relative;
+	z-index: 1;
+}
+.btn::before {
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+    background: linear-gradient(to top, #ff0000, #ff3333, #ff6666, #ff9999);	border-radius: 50%;
+	left: var(--xpos);
+	top: var(--ypos);
+	transform: translate(-50%, -50%);
+	transition: width 0.5s, height 0.5s;
+}
+.btn:hover::before {
+	width: 200px;
+	height: 200px;
+}
