@@ -43,6 +43,11 @@ body {
 			flex-direction: column;
             border:1px solid black;
 			background-color: rgba(0, 0, 255, 0.315);
+			transition: 0.5s;
+			&:hover{
+				transform:scale(1.1) translateY(-10px) ;
+				opacity:0.8;
+			}
 			& span.number {
 				font-size: 85px;
 				color: white;
