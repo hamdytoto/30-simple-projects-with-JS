@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			href="https://static-00.iconduck.com/assets.00/counter-line-icon-512x512-fcrpm9dk.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Character counter</title>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Real-time Character Counter</h2>
+			<textarea
+				id="textarea"
+				class="textarea"
+				placeholder="type your text here.."
+				maxLength="150"
+			>
+			</textarea>
+			<div class="update-container">
+				<p>
+					Total Character:
+					<span class="total-counter" id="total-counter">20</span>
+				</p>
+				<p>
+					Remaining Character:
+					<span class="remaining-counter" id="remain-counter">40</span>
+				</p>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
