@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+h2 {
+	font-size: 100px;
+	letter-spacing: 4px;
+	color: aliceblue;
+	backdrop-filter: brightness(0.5);
+}
+.btn {
+	margin-top: 100px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border: 2px solid white;
+	text-transform: capitalize;
+	transition: 1s;
+	&:hover {
+		background-color: white;
+		color: black;
+		border: 2px solid black;
+	}
+}
+.split {
+	width: 50%;
+	height: 100%;
+	top: 0;
+	padding: 50px 0;
+}
+.right {
+	position: absolute;
+	background-color: #a34343;
+	background-image: url(https://m.media-amazon.com/images/I/713icYPjIZL._AC_SX679_.jpg);
+	background-size: cover;
+	left: 0;
+}
+.left {
+	position: absolute;
+	background-image: url(https://f.nooncdn.com/p/pnsku/N53432485A/45/_/1694762141/1d7a85ca-4b85-4bcd-a7b5-d2be8799230d.jpg?format=avif&width=800);
+	background-color: #3d7321;
+	right: 0;
+	background-size: cover;
+}
+
+.active-left .left {
+    width:75%;
+}
+.active-left .right {
+    width:25%;
+}
+.active-right .right {
+    width:75%;
+}
+.active-right .left {
+    width:25%;
+}
+.left , .right {
+    transition: width 2s ease-in-out;
+}
