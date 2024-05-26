@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	background: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-	background-size:cover;
+	background-size: cover;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -27,7 +27,8 @@ body {
 	position: absolute;
 	width: 0px;
 	height: 0px;
-    background: linear-gradient(to top, #ff0000, #ff3333, #ff6666, #ff9999);	border-radius: 50%;
+	background: linear-gradient(to top, #ff0000, #ff3333, #ff6666, #ff9999);
+	border-radius: 50%;
 	left: var(--xpos);
 	top: var(--ypos);
 	transform: translate(-50%, -50%);
