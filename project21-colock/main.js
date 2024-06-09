@@ -10,9 +10,6 @@ function getRandomColor() {
 	}
 	return color;
 }
-// Example usage:
-console.log(getRandomColor()); // e.g. #3E2F1B
-
 function updateTime() {
 	let currentDate = new Date();
 	let hoursDeg = (Hours.style.transform = `rotate(${
