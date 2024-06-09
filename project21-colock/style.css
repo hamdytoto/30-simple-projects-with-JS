@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100vh;
+	background-color: floralwhite;
+	font-family: "Bangers", system-ui;
+	font-weight: 400;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.clock {
+	position: relative;
+	background-color: red;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 10px solid rgb(165, 3, 3);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.425);
+	box-shadow: outset 5px 5px 10px rgba(0, 0, 0, 0.3),
+		outset -5px -5px 10px rgba(0, 0, 0, 0.5),
+		outset 5px 5px 15px rgba(0, 0, 0, 0.3), 5px 5px 15px rgba(0, 0, 0, 0.3),
+		5px 5px 15px rgba(0, 0, 0, 0.3);
+	margin: 50px;
+	background-clip: border-box;
+}
+img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 50px;
+	width: 70px;
+	z-index: 2;
+}
+.numbers > div {
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.429);
+	&::before {
+		content: "";
+		position: absolute;
+		height: 10px;
+		width: 3px;
+		background-color: white;
+	}
+}
+.twelve {
+	top: 10px;
+	left: 50%;
+	transform: translate(-50%);
+	&::before {
+		top: -10px;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+.numbers > div.three {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	&::before {
+		top: 50%;
+		right: -10px;
+		transform: translateY(-50%);
+		height: 3px;
+		width: 8px;
+	}
+}
+.numbers > div.six {
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	&::before {
+		bottom: -10px;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+.numbers > div.nine {
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	&::before {
+		top: 50%;
+		left: -10px;
+		transform: translateY(-50%);
+		height: 3px;
+		width: 8px;
+	}
+}
+
+.arrows {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	&::before {
+		content: "";
+		width: 15px;
+		height: 15px;
+		z-index: 4;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.425);
+		border-radius: 50%;
+		background-color: white;
+	}
+
+	& > div {
+		background-color: white;
+		width: 5px;
+		height: 120px;
+		position: absolute;
+		transform-origin: bottom center;
+		bottom: 50%;
+		z-index: 3;
+		border-radius: 50% 50% 0 0;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.425);
+	}
+}
+.arrows .hours {
+	transform: rotate(0);
+	height: 120px;
+}
+.arrows .minutes {
+	transform: rotate(90deg);
+	height: 140px;
+}
+.arrows .seconds {
+	transform: rotate(60deg);
+	height: 160px;
+	width: 3px;
+}
