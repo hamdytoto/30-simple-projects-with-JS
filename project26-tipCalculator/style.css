@@ -1,0 +1,54 @@
+:root{
+    --main-color:green;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    background-color: aliceblue;
+    padding:30px;
+    border-radius: 20px;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 4px 8px rgb(0, 0,0,0.4);
+    &>h2 {
+        font-size: 30px;
+        color: var(--main-color);
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    &>input{
+        width: 70%;
+        height: 40px;
+        border:2px solid var(--main-color);
+        border-radius: 20px;
+        text-align: center;
+    }
+}
+.form .buttonEl {
+    width:30%;
+    background-color: var(--main-color);
+    color:white;
+    font-weight:bold ;
+}
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+}
