@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: cursive;
+}
+.container{
+    text-align: center;
+    width:20rem;
+    position: relative;
+    &>h1{
+        text-transform: capitalize;
+    }
+    &>.percentage{
+        font-size: 40px;
+    }
+    &>.loading-bar-back{
+        position:absolute;
+        height: 10px;
+        background-color: lightgray;
+        width: 100%;
+        border:none;
+        border-radius: 20px;
+    }
+    &>.loading-bar-front{
+        position:absolute;
+        height: 10px;
+        border: none;
+        background-color: orange;
+        width: 30%;
+        z-index: 1;
+        border-radius: 20px;
+    }
+}
