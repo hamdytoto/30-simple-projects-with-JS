@@ -1,0 +1,68 @@
+:root {
+	--changeColor: gray;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--changeColor);
+	font-family: cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.container {
+	display: flex;
+    position: relative;
+	flex-direction: column;
+	width: fit-content;
+	justify-content: center;
+	padding: 40px;
+	border-radius: 20px;
+	align-items: center;
+	row-gap: 20px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.409);
+	background-color: aliceblue;
+}
+h1 {
+	color: var(--changeColor);
+    text-transform: capitalize;
+}
+.celisus,
+.fahrenheit,
+.kelvin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+	& > .input {
+		border-radius: 20px;
+		padding: 10px;
+		color:var(--changeColor);
+		font-weight: 700;
+		text-align: center;
+		flex-basis: 65%;
+        border: 2px solid var(--changeColor);
+	}
+	& > label {
+		font-size: 20px;
+		font-style: italic;
+		&::first-letter {
+			color: var(--changeColor);
+			font-weight: 900;
+		}
+	}
+}
+h4 {
+    position:absolute;
+    bottom: 5px;
+    font-size: 12px;
+    color: var(--changeColor);
+}
